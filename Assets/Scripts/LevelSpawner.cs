@@ -11,6 +11,8 @@ public class LevelSpawner : MonoBehaviour
     [SerializeField] private float rayLength = 8f;
     [SerializeField] private MRUKAnchor.SceneLabels labelFilter;
 
+    private bool levelSpawned = false;
+
     
 
     private void Awake(){
@@ -22,6 +24,9 @@ public class LevelSpawner : MonoBehaviour
     }
     void Update()
     {
+        if(levelSpawned){
+            return;
+        }
         HandleControllerActions(OVRInput.Controller.RTouch);
     }
     
@@ -31,13 +36,16 @@ public class LevelSpawner : MonoBehaviour
 
             MRUKRoom room = MRUK.Instance.GetCurrentRoom();
 
-            bool hasHit = room.Raycast(ray, rayLength, LabelFilter.Included(labelFilter), out RaycastHit hitInfo, out MRUKAnchor anchor);
+            bool hasHit = room.Raycast(ray, rayLength, new LabelFilter(labelFilter), out RaycastHit hitInfo, out MRUKAnchor anchor);
 
             if(hasHit){
                 Vector3 hitPoint = hitInfo.point;
                 Vector3 hitNormal = hitInfo.normal;
 
                 Instantiate(level, hitPoint, Quaternion.Euler(hitNormal));
+                levelSpawned = true;
+
+                SpawnerGenerator.Instance.GenerateSpawnerPoints(hitPoint);
             }
         }
     }

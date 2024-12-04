@@ -23,7 +23,7 @@ public class DisplayLabel : MonoBehaviour
             return;
         }
 
-        bool hasHit = room.Raycast(ray, rayLength, LabelFilter.Included(labelFilter), out RaycastHit hitInfo, out MRUKAnchor anchor);
+        bool hasHit = room.Raycast(ray, rayLength, new LabelFilter(labelFilter), out RaycastHit hitInfo, out MRUKAnchor anchor);
         
         if(hasHit){
             Vector3 hitPoint = hitInfo.point;
