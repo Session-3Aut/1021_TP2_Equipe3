@@ -793,6 +793,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 259966456957457432, guid: 65fceadd56160dd47b20cdb511854fe0,
+        type: 3}
+      propertyPath: m_Type
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 259966456957457432, guid: 65fceadd56160dd47b20cdb511854fe0,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 584ffa385b835c04c9ef89764050ce60,
+        type: 3}
     - target: {fileID: 623443844673035662, guid: 65fceadd56160dd47b20cdb511854fe0,
         type: 3}
       propertyPath: m_IsActive
@@ -802,6 +813,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 3905603774178430908, guid: 65fceadd56160dd47b20cdb511854fe0,
+        type: 3}
+      propertyPath: m_Name
+      value: Achat
       objectReference: {fileID: 0}
     - target: {fileID: 3905603774178430908, guid: 65fceadd56160dd47b20cdb511854fe0,
         type: 3}
@@ -821,22 +837,22 @@ PrefabInstance:
     - target: {fileID: 8641074813580381686, guid: 65fceadd56160dd47b20cdb511854fe0,
         type: 3}
       propertyPath: m_Color.a
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8641074813580381686, guid: 65fceadd56160dd47b20cdb511854fe0,
         type: 3}
       propertyPath: m_Color.b
-      value: 0.5677109
+      value: 0.21960786
       objectReference: {fileID: 0}
     - target: {fileID: 8641074813580381686, guid: 65fceadd56160dd47b20cdb511854fe0,
         type: 3}
       propertyPath: m_Color.g
-      value: 0.5677109
+      value: 0.21960786
       objectReference: {fileID: 0}
     - target: {fileID: 8641074813580381686, guid: 65fceadd56160dd47b20cdb511854fe0,
         type: 3}
       propertyPath: m_Color.r
-      value: 0.6981132
+      value: 0.21960786
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2390,6 +2406,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 40992601}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1241328924
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1241328925}
+  m_Layer: 0
+  m_Name: ui_achat
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1241328925
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1241328924}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1244076990
 GameObject:
   m_ObjectHideFlags: 0
@@ -3073,3 +3120,4 @@ SceneRoots:
   - {fileID: 40992601}
   - {fileID: 220756420}
   - {fileID: 1866520430}
+  - {fileID: 1241328925}
